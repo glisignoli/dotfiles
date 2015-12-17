@@ -1,0 +1,81 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" My Plugins
+Plugin 'https://github.com/scrooloose/nerdtree.git'
+Plugin 'https://github.com/klen/python-mode.git'
+Plugin 'https://github.com/scrooloose/syntastic.git'
+Plugin 'https://github.com/godlygeek/tabular.git'
+Plugin 'https://github.com/tomtom/tlib_vim.git'
+Plugin 'https://github.com/MarcWeber/vim-addon-mw-utils.git'
+Plugin 'https://github.com/edkolev/tmuxline.vim.git'
+Plugin 'https://github.com/rodjek/vim-puppet.git'
+Plugin 'https://github.com/tpope/vim-sensible.git'
+Plugin 'https://github.com/garbas/vim-snipmate.git'
+Plugin 'https://github.com/honza/vim-snippets.git'
+Plugin 'https://github.com/christoomey/vim-tmux-navigator.git'
+Plugin 'https://github.com/tomasr/molokai.git'
+Plugin 'https://github.com/majutsushi/tagbar.git'
+Plugin 'https://github.com/easymotion/vim-easymotion.git'
+Plugin 'https://github.com/xolox/vim-misc.git'
+Plugin 'https://github.com/xolox/vim-easytags.git'
+'
+" The following are examples of different formats supported.
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+" Turn on syntax
+syntax enable
+
+" Turn on number
+set number
+
+" Highlight ugly tabs and whitespaces
+highlight LiteralTabs ctermbg=darkgreen guibg=darkgreen
+match LiteralTabs /\s\	/
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+match ExtraWhitespace /\s\+$/
+highlight Normal ctermfg=grey ctermbg=black
+
+" Vim airline fonts
+let g:airline_powerline_fonts = 1
+
+" Enable Mouse
+set mouse=a
+
+" Setup jj to be esc
+inoremap jj <Esc>
+
+" Remap leader to ',,'
+let mapleader=","
+
+" Set Tabs
+set tabstop=2 shiftwidth=2 expandtab
+
+" Make neovim work with python virtual envs
+let g:python_host_prog='/usr/bin/python'
+
+" Use the clipboard
+set clipboard=unnamedplus
