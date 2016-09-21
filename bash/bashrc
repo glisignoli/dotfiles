@@ -1,6 +1,18 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+if [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash ]; then
+  . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
+fi
+
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+    . /usr/share/bash-completion/completions/git
+fi
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
 
 #Vagrant stuff
 source ~/.vagrant_ps1
@@ -10,6 +22,21 @@ case $- in
     *i*) ;;
       *) return;;
 esac
+
+
+# Enable git aliases
+function_exists() {
+    declare -f -F $1 > /dev/null
+    return $?
+}
+
+for al in `__git_aliases`; do
+    alias g$al="git $al"
+
+    complete_func=_git_$(__git_aliased_command $al)
+    function_exists $complete_fnc && __git_complete g$al $complete_func
+done
+# End git aliases
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -114,24 +141,6 @@ fi
 if [ -f ./.bash_local ]; then
   source ./.bash_local
 fi
-
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
-
-# Enable git aliases
-function_exists() {
-    declare -f -F $1 > /dev/null
-    return $?
-}
-
-for al in `__git_aliases`; do
-    alias g$al="git $al"
-
-    complete_func=_git_$(__git_aliased_command $al)
-    function_exists $complete_fnc && __git_complete g$al $complete_func
-done
-# End git aliases
 
 export GOPATH=$HOME/gopath
 export PATH=$GOPATH:$GOPATH/bin:$PATH
