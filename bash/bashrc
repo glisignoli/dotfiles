@@ -117,3 +117,6 @@ fi
 
 export GOPATH=$HOME/gopath
 export PATH=$GOPATH:$GOPATH/bin:$PATH
+
+#Tell tmux to setup airline
+vim -c 'Tmuxline' -c ':q'
