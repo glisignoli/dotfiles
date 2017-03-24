@@ -145,8 +145,13 @@ if [ -f ./.bash_local ]; then
   source ./.bash_local
 fi
 
-export GOPATH=$HOME/gopath
-export PATH=$GOPATH:$GOPATH/bin:$PATH
+# If go is installed the setup gopath
+if [ -d $HOME/gopath ]; then
+  export GOPATH=$HOME/gopath
+  export PATH=$GOPATH:$GOPATH/bin:$PATH
+fi
 
-#Tell tmux to setup airline
-vim -c 'Tmuxline' -c ':q'
+# If inside a tmux session then load tmux line
+if [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; then
+  vim -c 'Tmuxline' -c ':q'
+fi
