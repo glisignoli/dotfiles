@@ -4,9 +4,10 @@
 # Backup old files
 echo "Backing up old files to ~/.olddotfiles"
 mkdir ~/.olddotfiles
-mv ~/.Xdefaults ~/.bashrc ~/.bash_profile ~/.vagrant_ps1 ~/.gitconfig ~/.tmux.conf ~/.vimrc ~/.olddotfiles 2>&1 > /dev/null
+mv ~/.irssi ~/.Xdefaults ~/.bashrc ~/.bash_profile ~/.vagrant_ps1 ~/.gitconfig ~/.tmux.conf ~/.vimrc ~/.olddotfiles 2>&1 > /dev/null
 
 # Link files
+ln -s `pwd`/irssi ~/.irssi
 ln -s `pwd`/Xdefaults/.Xdefaults ~/.Xdefaults
 ln -s `pwd`/bash/bashrc ~/.bashrc
 ln -s `pwd`/bash/bash_profile ~/.bash_profile
