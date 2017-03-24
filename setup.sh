@@ -1,9 +1,12 @@
 #!/bin/bash
 # Sets up all dotfiles
 
-# Remove old files
-rm -rf ~/.Xdefaults ~/.bashrc ~/.bash_profile ~/.vagrant_ps1 ~/.gitconfig ~/.tmux.conf ~/.vimrc 2>&1 > /dev/null
+# Backup old files
+echo "Backing up old files to ~/.olddotfiles"
+mkdir ~/.olddotfiles
+mv ~/.Xdefaults ~/.bashrc ~/.bash_profile ~/.vagrant_ps1 ~/.gitconfig ~/.tmux.conf ~/.vimrc ~/.olddotfiles 2>&1 > /dev/null
 
+# Link files
 ln -s `pwd`/Xdefaults/.Xdefaults ~/.Xdefaults
 ln -s `pwd`/bash/bashrc ~/.bashrc
 ln -s `pwd`/bash/bash_profile ~/.bash_profile
