@@ -2,6 +2,10 @@
 URxvt.allow_bold:           true
 URxvt.font:     xft:Droid Sans Mono for Powerline:size=12:antialias=true
 URxvt.boldFont: xft:Droid Sans Mono for Powerline:bold:size=12:antialias=true
+XTerm*faceName: DejaVu Sans Mono for Powerline
+
+"\eOc": forward-word
+"\eOd": backward-word
 
 ! Fix font space
 URxvt*letterSpace: -1
