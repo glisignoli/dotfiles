@@ -152,11 +152,21 @@ if [ -d $HOME/gopath ]; then
   export PATH=$GOPATH:$GOPATH/bin:$PATH
 fi
 
-# If inside a tmux session then load tmux line
-if [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; then
-  vim -c 'Tmuxline' -c ':q'
-fi
-
 # Git Prompts
 GIT_PROMPT_ONLY_IN_REPO=1
 source ~/.bash-git-prompt/gitprompt.sh
+
+# Disable the bell
+xset -b
+
+# Autostart tmux if installed
+if [ -z $TMUX ]; then
+  if which tmux >/dev/null 2>&1; then
+    ID="`tmux ls | grep -vm1 attached | cut -d: -f1`" # get the id of a deattached session
+    if [[ -z "$ID" ]] ;then # if not available create a new one
+      tmux new-session
+    else
+      tmux attach-session -t "$ID" # if available attach to it
+    fi
+  fi
+fi
