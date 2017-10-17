@@ -157,7 +157,7 @@ GIT_PROMPT_ONLY_IN_REPO=1
 source ~/.bash-git-prompt/gitprompt.sh
 
 # Disable the bell
-xset -b
+xset -b > /dev/null 2>&1
 
 # Autostart tmux if installed
 if [ -z $TMUX ]; then
