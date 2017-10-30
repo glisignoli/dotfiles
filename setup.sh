@@ -16,3 +16,9 @@ ln -s `pwd`/git/gitconfig ~/.gitconfig
 ln -s `pwd`/tmux/tmux.conf ~/.tmux.conf
 ln -s `pwd`/tmux/tmuxline.snapshot ~/.tmuxline.snapshot
 ln -s `pwd`/vimrc/vimrc ~/.vimrc
+
+# Setup bin directory
+mkdir -p ~/bin
+
+# Link binaries
+ln -s `pwd`/tmux/scripts/tmux-ssh.sh ~/bin/tmux-ssh
