@@ -157,7 +157,7 @@ fi
 
 # Git Prompts
 GIT_PROMPT_ONLY_IN_REPO=1
-source ~/.bash-git-prompt/gitprompt.sh
+source ~/bin/gitprompt.sh
 
 # Disable the bell
 xset -b > /dev/null 2>&1
