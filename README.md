@@ -1,6 +1,5 @@
 # dotfiles
 Just my dotfiles
 
-# Requirements
-Vundle installed for vim
-
+# Recomended packages
+tmux neovim libinput ctags git irssi vagrant

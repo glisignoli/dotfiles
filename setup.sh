@@ -4,6 +4,7 @@
 # Backup old files
 echo "Backing up old files to ~/.olddotfiles"
 mkdir -p ~/.olddotfiles
+mkdir -p ~/.config/nvim
 mv ~/.irssi \
   ~/.Xdefaults \
   ~/.bashrc \
@@ -27,6 +28,8 @@ ln -sf `pwd`/git/gitconfig ~/.gitconfig
 ln -sf `pwd`/tmux/tmux.conf ~/.tmux.conf
 ln -sf `pwd`/tmux/tmuxline.snapshot ~/.tmuxline.snapshot
 ln -sf `pwd`/vimrc/vimrc ~/.vimrc
+ln -sf `pwd`/.config/nvim/init.vim
+ln -sf `pwd`/gestures/libinput-gestures.conf ~/.config/libinput-gestures.conf
 
 # Setup bin directory
 mkdir -p ~/bin
@@ -35,3 +38,8 @@ mkdir -p ~/bin
 echo "Linking Binaries"
 ln -sf `pwd`/tmux/scripts/tmux-ssh.sh ~/bin/tmux-ssh
 ln -sf `pwd`/submodules/bash-git-prompt/gitprompt.sh ~/bin/gitprompt.sh
+
+echo "Post install steps:"
+echo " * Install recomended packages (see README.md)"
+echo " * Run misc-scripts scripts"
+echo " * Install libinput-gestures"
