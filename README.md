@@ -2,4 +2,4 @@
 Just my dotfiles
 
 # Recomended packages
-tmux neovim libinput ctags git irssi vagrant
+tmux neovim libinput ctags git irssi vagrant bash-completion
