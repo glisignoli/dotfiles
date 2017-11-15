@@ -79,3 +79,7 @@ let g:python_host_prog='/usr/bin/python'
 
 " Use the clipboard
 set clipboard=unnamedplus
+
+" Setup tmuxline
+let g:airline#extensions#tmuxline#enabled = 1
+let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"

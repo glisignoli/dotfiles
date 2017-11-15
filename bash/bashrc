@@ -5,10 +5,14 @@ if [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.ba
   . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 fi
 
+# Bash completion loading
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
     . /usr/share/bash-completion/completions/git
 fi
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
+    . /usr/share/bash-completion/completions/git
 
 # Local bin folder
 export PATH=$HOME/bin:$PATH

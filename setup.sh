@@ -1,6 +1,9 @@
 #!/bin/bash
 # Sets up all dotfiles
 
+# Get submodules
+git submodule update --init --force --remote
+
 # Backup old files
 echo "Backing up old files to ~/.olddotfiles"
 mkdir -p ~/.olddotfiles
@@ -26,9 +29,8 @@ ln -sf `pwd`/bash/bash_profile ~/.bash_profile
 ln -sf `pwd`/bash/vagrant_ps1 ~/.vagrant_ps1
 ln -sf `pwd`/git/gitconfig ~/.gitconfig
 ln -sf `pwd`/tmux/tmux.conf ~/.tmux.conf
-ln -sf `pwd`/tmux/tmuxline.snapshot ~/.tmuxline.snapshot
 ln -sf `pwd`/vimrc/vimrc ~/.vimrc
-ln -sf `pwd`/.config/nvim/init.vim
+ln -sf `pwd`/vimrc/vimrc ~/.config/nvim/init.vim
 ln -sf `pwd`/gestures/libinput-gestures.conf ~/.config/libinput-gestures.conf
 
 # Setup bin directory
