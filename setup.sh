@@ -38,6 +38,7 @@ ln -sf `pwd`/vimrc/vimrc ~/.vimrc
 ln -sf `pwd`/vimrc/vimrc ~/.config/nvim/init.vim
 ln -sf `pwd`/gestures/libinput-gestures.conf ~/.config/libinput-gestures.conf
 ln -sf `pwd`/sway/config ~/.config/sway/config
+ln -sf `pwd`/i3blocks/i3blocks.cfg ~/.i3blocks.cfg
 
 # Setup bin directory
 mkdir -p ~/bin
