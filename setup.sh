@@ -42,10 +42,16 @@ ln -sf `pwd`/sway/config ~/.config/sway/config
 # Setup bin directory
 mkdir -p ~/bin
 
+# Setup i3blocks
+export PREFIX=~/Apps/i3blocks;
+make -C `pwd`/submodules/i3blocks make install
+
+
 # Link binaries
 echo "Linking Binaries"
 ln -sf `pwd`/tmux/scripts/tmux-ssh.sh ~/bin/tmux-ssh
 ln -sf `pwd`/submodules/bash-git-prompt/gitprompt.sh ~/bin/gitprompt.sh
+ln -sf ~/Apps/i3blocks/bin/i3blocks ~/bin/i3blocks
 
 echo "Post install steps:"
 echo " * Install recomended packages (see README.md)"

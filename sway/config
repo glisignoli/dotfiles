@@ -188,12 +188,13 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
+    status_command /home/gino/bin/i3blocks -c /home/gino/.i3blocks.cfg
     position top
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+    #colors {
+    #    statusline #ffffff
+    #    background #323232
+    #    inactive_workspace #32323200 #32323200 #5c5c5c
+    #}
 }
 
 include /etc/sway/config.d/*
