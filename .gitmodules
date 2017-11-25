@@ -1,3 +1,6 @@
 [submodule "submodules/bash-git-prompt"]
 	path = submodules/bash-git-prompt
 	url = https://github.com/magicmonty/bash-git-prompt
+[submodule "submodules/i3blocks"]
+	path = submodules/i3blocks
+	url = https://github.com/vivien/i3blocks.git

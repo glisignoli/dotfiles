@@ -7,7 +7,7 @@ git submodule update --init --force --remote
 # Backup old files
 echo "Backing up old files to ~/.olddotfiles"
 mkdir -p ~/.olddotfiles
-mkdir -p ~/.config/nvim
+
 mv ~/.irssi \
   ~/.Xdefaults \
   ~/.bashrc \
@@ -17,8 +17,13 @@ mv ~/.irssi \
   ~/.tmux.conf \
   ~/.tmuxline.snapshot \
   ~/.vimrc \
+  ~/.config/sway \
   ~/.olddotfiles \
   > /dev/null 2>&1
+
+# Create missing directories
+mkdir -p ~/.config/nvim
+mkdir -p ~/.config/sway
 
 # Link files
 echo "Linking files"
@@ -32,6 +37,7 @@ ln -sf `pwd`/tmux/tmux.conf ~/.tmux.conf
 ln -sf `pwd`/vimrc/vimrc ~/.vimrc
 ln -sf `pwd`/vimrc/vimrc ~/.config/nvim/init.vim
 ln -sf `pwd`/gestures/libinput-gestures.conf ~/.config/libinput-gestures.conf
+ln -sf `pwd`/sway/config ~/.config/sway/config
 
 # Setup bin directory
 mkdir -p ~/bin
