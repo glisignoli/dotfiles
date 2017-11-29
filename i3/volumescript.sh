@@ -1,4 +1,5 @@
 #!/bin/bash
+pkill --signal RTMIN+10 i3blocks
 if [ $1 = 'up' ]; then
   amixer -q sset Master,0 1%+ unmute
   killall -USR1 i3status

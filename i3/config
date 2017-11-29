@@ -16,7 +16,7 @@ set $mod Mod4
 # Volume Keys
 bindsym XF86AudioRaiseVolume exec "/home/gino/.config/i3/volumescript.sh up"
 bindsym XF86AudioLowerVolume exec "/home/gino/.config/i3/volumescript.sh down"
-bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
+bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle; pkill --signal RTMIN+10 i3blocks"
 
 # Backlight
 bindsym XF86KbdBrightnessUp exec "/usr/bin/brightlight -i 50"
