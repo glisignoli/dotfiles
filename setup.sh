@@ -19,6 +19,7 @@ mv ~/.irssi \
   ~/.vimrc \
   ~/.config/sway \
   ~/.config/i3 \
+  ~/.config/dunst \
   ~/.olddotfiles \
   > /dev/null 2>&1
 
@@ -26,11 +27,13 @@ mv ~/.irssi \
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/sway
 mkdir -p ~/.config/i3
+mkdir -p ~/.config/dunst
 
 # Link files
 echo "Linking files"
 ln -sf `pwd`/irssi ~/.irssi
 ln -sf `pwd`/i3/config ~/.config/i3/config
+ln -sf `pwd`/i3/volumescript.sh ~/.config/i3/volumescript.sh
 ln -sf `pwd`/Xdefaults/.Xdefaults ~/.Xdefaults
 ln -sf `pwd`/bash/bashrc ~/.bashrc
 ln -sf `pwd`/bash/bash_profile ~/.bash_profile
@@ -42,6 +45,7 @@ ln -sf `pwd`/vimrc/vimrc ~/.config/nvim/init.vim
 ln -sf `pwd`/gestures/libinput-gestures.conf ~/.config/libinput-gestures.conf
 ln -sf `pwd`/sway/config ~/.config/sway/config
 ln -sf `pwd`/i3blocks/i3blocks.cfg ~/.i3blocks.cfg
+ln -sf `pwd`/dunst/dunst/dunstrc ~/.config/dunst/dunstrc
 
 # Link Xdefaults and Xresources
 ln -sf ~/.Xdefaults ~/.Xresources
