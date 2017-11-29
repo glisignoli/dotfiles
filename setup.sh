@@ -43,6 +43,9 @@ ln -sf `pwd`/gestures/libinput-gestures.conf ~/.config/libinput-gestures.conf
 ln -sf `pwd`/sway/config ~/.config/sway/config
 ln -sf `pwd`/i3blocks/i3blocks.cfg ~/.i3blocks.cfg
 
+# Link Xdefaults and Xresources
+ln -sf ~/.Xdefaults ~/.Xresources
+
 # Setup bin directory
 mkdir -p ~/bin
 

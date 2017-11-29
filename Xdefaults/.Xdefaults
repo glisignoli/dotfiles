@@ -1,8 +1,12 @@
 ! Fonts
 URxvt.allow_bold:           true
-URxvt.font:     xft:Droid Sans Mono for Powerline:size=12:antialias=true
-URxvt.boldFont: xft:Droid Sans Mono for Powerline:bold:size=12:antialias=true
+URxvt.font:     xft:Droid Sans Mono for Powerline:pixlesize=12:antialias=true
+URxvt.boldFont: xft:Droid Sans Mono for Powerline:bold:pixlesize=12:antialias=true
 XTerm*faceName: DejaVu Sans Mono for Powerline
+
+! HIDPI
+Xft.dpi: 220
+
 
 "\eOc": forward-word
 "\eOd": backward-word
