@@ -4,6 +4,10 @@ URxvt.font:     xft:Droid Sans Mono for Powerline:pixlesize=12:antialias=true
 URxvt.boldFont: xft:Droid Sans Mono for Powerline:bold:pixlesize=12:antialias=true
 XTerm*faceName: DejaVu Sans Mono for Powerline
 
+! Disable annoying ctrl-shift
+URxvt*iso14755: False
+URxvt*iso14755_52: False
+
 ! HIDPI
 Xft.dpi: 220
 
