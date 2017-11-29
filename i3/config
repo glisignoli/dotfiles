@@ -13,9 +13,15 @@ exec /usr/bin/dunst &
 
 set $mod Mod4
 
+# Volume Keys
 bindsym XF86AudioRaiseVolume exec "/home/gino/.config/i3/volumescript.sh up"
 bindsym XF86AudioLowerVolume exec "/home/gino/.config/i3/volumescript.sh down"
 bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle;killall -USR1 i3status"
+
+# Backlight
+bindsym XF86KbdBrightnessUp exec "/usr/bin/brightlight -i 50"
+bindsym XF86KbdBrightnessDown exec "/usr/bin/brightlight -d 50"
+
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
