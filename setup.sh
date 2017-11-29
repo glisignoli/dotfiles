@@ -18,16 +18,19 @@ mv ~/.irssi \
   ~/.tmuxline.snapshot \
   ~/.vimrc \
   ~/.config/sway \
+  ~/.config/i3 \
   ~/.olddotfiles \
   > /dev/null 2>&1
 
 # Create missing directories
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/sway
+mkdir -p ~/.config/i3
 
 # Link files
 echo "Linking files"
 ln -sf `pwd`/irssi ~/.irssi
+ln -sf `pwd`/i3/conifg ~/.config/i3/config
 ln -sf `pwd`/Xdefaults/.Xdefaults ~/.Xdefaults
 ln -sf `pwd`/bash/bashrc ~/.bashrc
 ln -sf `pwd`/bash/bash_profile ~/.bash_profile
