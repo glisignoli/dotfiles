@@ -30,7 +30,7 @@ mkdir -p ~/.config/i3
 # Link files
 echo "Linking files"
 ln -sf `pwd`/irssi ~/.irssi
-ln -sf `pwd`/i3/conifg ~/.config/i3/config
+ln -sf `pwd`/i3/config ~/.config/i3/config
 ln -sf `pwd`/Xdefaults/.Xdefaults ~/.Xdefaults
 ln -sf `pwd`/bash/bashrc ~/.bashrc
 ln -sf `pwd`/bash/bash_profile ~/.bash_profile
