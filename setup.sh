@@ -57,7 +57,6 @@ mkdir -p ~/bin
 export PREFIX=~/Apps/i3blocks;
 make -C `pwd`/submodules/i3blocks make install
 
-
 # Link binaries
 echo "Linking Binaries"
 ln -sf `pwd`/tmux/scripts/tmux-ssh.sh ~/bin/tmux-ssh

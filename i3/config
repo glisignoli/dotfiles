@@ -10,6 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 # Start dunst
 exec /usr/bin/dunst &
+exec /usr/bin/libinput-gestures-setuop start
 
 set $mod Mod4
 
