@@ -7,3 +7,6 @@
 [submodule "submodules/libinput-gestures"]
 	path = submodules/libinput-gestures
 	url = https://github.com/bulletmark/libinput-gestures.git
+[submodule "submodules/--force"]
+	path = submodules/--force
+	url = https://github.com/scop/bash-completion.git
