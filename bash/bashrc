@@ -150,3 +150,10 @@ if [ -z $TMUX ]; then
     fi
   fi
 fi
+
+# hstr configuration
+if [ -f /usr/bin/hstr ]; then
+  export HH_CONFIG=hicolor
+  export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
+  if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hh -- \C-j"'; fi
+fi
