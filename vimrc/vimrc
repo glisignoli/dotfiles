@@ -27,7 +27,6 @@ Plugin 'https://github.com/tomasr/molokai.git' "Color scheme
 Plugin 'https://github.com/majutsushi/tagbar.git' "View Tags
 Plugin 'https://github.com/easymotion/vim-easymotion.git' "Easymotion searching
 Plugin 'https://github.com/xolox/vim-misc.git'
-Plugin 'https://github.com/xolox/vim-easytags.git' "Generate tags
 
 " The following are examples of different formats supported.
 
@@ -70,6 +69,9 @@ inoremap jj <Esc>
 
 " Remap leader to ',,'
 let mapleader=","
+
+" Tagbar
+noremap <Leader>t :TagbarToggle<CR>
 
 " Set Tabs
 set tabstop=2 shiftwidth=2 expandtab

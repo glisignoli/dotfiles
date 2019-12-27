@@ -65,5 +65,6 @@ ln -sf ~/Apps/i3blocks/bin/i3blocks ~/bin/i3blocks
 
 echo "Post install steps:"
 echo " * Install recomended packages (see README.md)"
+echo " * Install universal ctags from submodules"
 echo " * Run misc-scripts scripts"
 echo " * Install libinput-gestures"
