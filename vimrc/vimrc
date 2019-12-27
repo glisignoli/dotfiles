@@ -11,24 +11,24 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " My Plugins
-Plugin 'https://github.com/scrooloose/nerdtree.git'
-Plugin 'https://github.com/klen/python-mode.git'
-Plugin 'https://github.com/scrooloose/syntastic.git'
-Plugin 'https://github.com/godlygeek/tabular.git'
-Plugin 'https://github.com/tomtom/tlib_vim.git'
-Plugin 'https://github.com/MarcWeber/vim-addon-mw-utils.git'
-Plugin 'https://github.com/edkolev/tmuxline.vim.git'
-Plugin 'https://github.com/rodjek/vim-puppet.git'
-Plugin 'https://github.com/tpope/vim-sensible.git'
-Plugin 'https://github.com/garbas/vim-snipmate.git'
-Plugin 'https://github.com/honza/vim-snippets.git'
-Plugin 'https://github.com/christoomey/vim-tmux-navigator.git'
-Plugin 'https://github.com/tomasr/molokai.git'
-Plugin 'https://github.com/majutsushi/tagbar.git'
-Plugin 'https://github.com/easymotion/vim-easymotion.git'
+Plugin 'https://github.com/scrooloose/nerdtree.git' "Tree View
+Plugin 'https://github.com/klen/python-mode.git' "Python
+Plugin 'https://github.com/scrooloose/syntastic.git' "Syntax Highlighting for everything
+Plugin 'https://github.com/godlygeek/tabular.git' "Tab alignment of stuff
+Plugin 'https://github.com/tomtom/tlib_vim.git' "Some library stuff for other modules
+Plugin 'https://github.com/MarcWeber/vim-addon-mw-utils.git' "Some library stuff for other modules
+Plugin 'https://github.com/edkolev/tmuxline.vim.git' "Tmux line
+Plugin 'https://github.com/rodjek/vim-puppet.git' "Puppet
+Plugin 'https://github.com/tpope/vim-sensible.git' "Sensible defaults
+Plugin 'https://github.com/garbas/vim-snipmate.git' "Snippit support
+Plugin 'https://github.com/honza/vim-snippets.git' "Some default snippits
+Plugin 'https://github.com/christoomey/vim-tmux-navigator.git' "Navigate with ctrl in tmux/vim
+Plugin 'https://github.com/tomasr/molokai.git' "Color scheme
+Plugin 'https://github.com/majutsushi/tagbar.git' "View Tags
+Plugin 'https://github.com/easymotion/vim-easymotion.git' "Easymotion searching
 Plugin 'https://github.com/xolox/vim-misc.git'
-Plugin 'https://github.com/xolox/vim-easytags.git'
-'
+Plugin 'https://github.com/xolox/vim-easytags.git' "Generate tags
+
 " The following are examples of different formats supported.
 
 " All of your Plugins must be added before the following line
